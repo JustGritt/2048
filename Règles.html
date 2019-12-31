@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="MonStyle.css">
+    <title> Règles du jeu - 2048 </title>
+  </head>
+
+  <body>
+  <!-- Checkbox du menu -->
+  <input type="checkbox" id="sidebar-controller-check"/>
+
+  <!-- Marges de la page -->
+  <div class="page-wrapper">
+
+    <!-- Permet d'ouvrir le menu -->
+    <label for="sidebar-controller-check" id="sidebar-controller">
+      <a for="sidebar-controller-check"></a>
+
+      <!-- Icone du menu -->
+      <div id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+    </label>
+
+    <!-- Contenu du menu -->
+    <div class="sidebar" >
+      <ul>
+        <li><h2 class="sidebar-title"> Menu </h2></li>
+        <li><a class="sidebar-text" href="#front">Page d'acceuil</a></li>
+        <li><a class="sidebar-text" href="MonProjet.html" target="_blank">Mon projet</a></li>
+        <li><a class="sidebar-text active" href="Règles.html">Règles</a></li>
+        <li><a class="sidebar-text" href="MonProjet.html" target="_blank">Télégarcher</a></li>
+        <li><a class="sidebar-text" href="mailto:Alexis.Tan@assemblee-nationale.fr">Me contacter</a></li>
+      </ul>
+    </div>
+
+    <!-- ║ Contenu de la page ║ -->
+    <div class="page-content-rules" id="front">
+      <div class="wrapper">
+
+        <!-- Page d'accueil -->
+        <div class="front-content"> <hr>
+          <!-- Titre de présentation -->
+          <h1 class="titre-main-rules">2048</h1> <hr>
+          <h2 class="titre-rules">Les règles du jeu</h2> <hr>
+          <!-- Sous-titre -->
+          <h3 class="subtitle-rules">Alexis Tan</h3>
+          <!-- Icone flèche vers le bas -->
+          <a class="arrow"></a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bloc contenant les informations -->
+    <div class="content">
+
+      <!-- Contient les règles du jeu -->
+      <div class="regles">
+
+        <!-- ║ Partie Règles ║ -->
+        <h2 class="regles-title"> Quelles sont les règles du 2048 ? </h2> <hr>
+
+        <!-- Exemple déplacement -->
+        <p class="regles-text"> Dans ce célèbre jeu de puzzle, vous devez faire glisser des tuiles numérotées avec des puissances de 2 verticalement ou horizontalement afin de les assembler jusqu'à finalement obtenir une tuile 2048. </p>
+        <div class="exemple">
+
+          <div class="page">
+
+            <div class="grid">
+
+              <div class="grid-colonne">
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+              </div>
+
+              <div class="grid-colonne">
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+              </div>
+
+              <div class="grid-colonne">
+                <div class="grid-case tile down"> 2 </div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+
+              </div>
+
+              <div class="grid-colonne">
+                <div class="grid-case tile neutral"> 2 </div>
+                <div class="grid-case tile inactive"> 4 </div>
+                <div class="grid-case tile left"> 2</div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+                <div class="grid-case"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="regles-text">
+          A noter qu'il est seulement possible d'assembler que des tuiles avec la même puissance de 2. <br>
+          Ainsi, une tuile numérotée [2] ne pourra être assemblée qu'avec une autre tuile du même nombre.
+      </p>
+      <p class="regles-text">
+          Le plateau est composée d'une grille de 4 par 4. Une nouvelle tuile sera ajoutée aléatoirement à la grille après chaque mouvement, il faudra alors faire attention et prévoir ses actions à l'avance. <br>
+          A chaque tuile fusionnée le score augmentera, obtenez le plus haut score et partagez le à vos amis pour flex et de montrer à quel point vous êtes le meilleur. <br>
+        </p>
+        <div class="social-media">
+          <a class="button" href="#"> Facebook </a>
+          <a class="button" href="#"> Twitter </a>
+          <a class="button" href="#"> Pinterest </a>
+          <a class="button" href="#"> Reddit </a>
+        </div>
+        <!-- Fin partage -->
+        <hr>
+        <!-- Astuces -->
+        <h2 class="regles-title"> Quelques astuces pour vous aider </h2> <hr>
+
+        <h3 class="regles-subtitle"> La grille progressive </h3>
+        <p class="regles-text tips">
+          C'est une méthode qui consiste à avoir une grille en escalier (les puissances élevées sur les extrémitées de la grille, les puissances faibles, proches du centre). Il faut faire en sorte que la valeur des cases augmente ou descende quelle que soit la direction. <br> <br>
+          Comme par exemple, un escalier 2 - 4 - 8 - 16 est acceptable, tout comme 32 - 8 - 4 - 2. <br>
+          Mais un escalier 2 - 8 - 2 - 16 ne l'est pas (à cause de la 3eme tuile).
+        </p>
+
+        <h3 class="regles-subtitle"> Gérer son espace </h3>
+        <p class="regles-text tips">
+          Dans ce jeu, on possède un espace limité de 4 par 4 soit 16 cases au total. Il faut donc prévoir un maximum de cases vides et privilégier les déplacements qui permettent de libérer de l'espace sur la grille.
+        </p>
+
+        <h3 class="regles-subtitle"> Forcer les tuiles </h3>
+        <p class="regles-text tips">
+          Après chaque déplacement, il y a une forte chance qu'une tuile [2] ou une tuile [4] apparaisse aléatoirement sur la grille. On pourra alors prévoir à l'avance l'apparition de ces tuiles a des endroits stratégiques.
+        </p>
+        <p class="regles-text tips">
+          Il suffit simplement d'occuper toute une ligne ou une colonne de la grille. En effet les tuiles apparaissent sur des emplacements vide de la grille. Ansi en regroupant par exemple toutes nos tuiles en bas de la grille, l'apparition des tuiles se fera forcément en haut de grille.
+        </p>
+        <hr>
+
+        <!-- Téléchargement -->
+        <h2 class="regles-title"> Prêts à jouer ? </h2> <hr>
+        <a href="#MonProjet.html" class="button download"> Télécharger le jeu </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
